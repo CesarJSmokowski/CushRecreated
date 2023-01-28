@@ -1,0 +1,17 @@
+cush> /tmp/tmpYm_vqy -divzero/tmp/tmpYm_vqy -divzero
+
+floating point exception
+cush> /tmp/tmpYm_vqy -segfault/tmp/tmpYm_vqy -segfault
+
+segmentation fault
+cush> /tmp/tmpYm_vqy -abort/tmp/tmpYm_vqy -abort
+
+aborted
+cush> /tmp/tmpYm_vqy/tmp/tmpYm_vqy
+
+killed
+cush> /tmp/tmpYm_vqy/tmp/tmpYm_vqy
+
+terminated
+Terminatedcush> exitexit
+

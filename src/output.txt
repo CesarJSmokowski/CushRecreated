@@ -1,0 +1,532 @@
+"h.tsil" edulcni#
+>h.tressa< edulcni#
+
+"daeh" eht :stnemele redaeh owt evah stsil deknil ylbuod ruO */
+eht retfa tsuj "liat" eht dna tnemele tsrif eht erofeb tsuj   
+sa ,llun si redaeh tnorf eht fo knil 'verp` ehT  .tnemele tsal   
+sknil owt rehto riehT  .redaeh kcab eht fo knil 'txen` eht si   
+.tsil eht fo stnemele roiretni eht aiv rehto hcae drawot tniop   
+
+:siht ekil skool tsil ytpme nA   
+
++------+     +------+                      
+>---| liat |>---<| daeh |---<                  
++------+     +------+                      
+
+:siht ekil skool ti ni stnemele owt htiw tsil A   
+
++------+     +-------+     +-------+     +------+        
+>---<| liat |>---<|   2   |>---<|   1   |>---<| daeh |---<    
++------+     +-------+     +-------+     +------+        
+
+laiceps fo stol setanimile tnemegnarra siht fo yrtemmys ehT   
+ta kool a ekat ,elpmaxe roF  .gnissecorp tsil ni sesac   
+on dna stnemngissa retniop owt ylno sekat ti :)(evomer_tsil   
+eb dluow edoc eht naht relpmis tol a s'tahT  .slanoitidnoc   
+.stnemele redaeh tuohtiw   
+
+,desu si tnemele redaeh hcae ni sretniop eht fo eno ylno esuaceB(   
+tnemele redaeh elgnis a otni meht enibmoc tcaf ni dluoc ew   
+etarapes owt gnisu tuB  .yticilpmis siht gnicifircas tuohtiw   
+emos no gnikcehc fo tib elttil a od ot su swolla stnemele   
+/* ).elbaulav eb nac hcihw ,snoitarepo   
+
+,b* mele_tsil tcurts ,a* mele_tsil tcurts( detros_si loob citats
+;)xua* diov ,ssel* cnuf_ssel_tsil                       
+
+/* .esiwrehto eslaf ,daeh a si MELE fi eurt snruteR */
+loob enilni citats
+)mele* mele_tsil tcurts( daeh_si
+{
+;LLUN =! txen>-mele && LLUN == verp>-mele && LLUN =! mele nruter  
+}
+
+,tnemele roiretni na si MELE fi eurt snruteR */
+/* .esiwrehto eslaf   
+loob enilni citats
+)mele* mele_tsil tcurts( roiretni_si
+{
+;LLUN =! txen>-mele && LLUN =! verp>-mele && LLUN =! mele nruter  
+}
+
+/* .esiwrehto eslaf ,liat a si MELE fi eurt snruteR */
+loob enilni citats
+)mele* mele_tsil tcurts( liat_si
+{
+;LLUN == txen>-mele && LLUN =! verp>-mele && LLUN =! mele nruter  
+}
+
+/* .tsil ytpme na sa TSIL sezilaitinI */
+diov
+)tsil* tsil tcurts( tini_tsil
+{
+;)LLUN =! tsil( tressa  
+;LLUN = verp.daeh>-tsil  
+;liat>-tsil& = txen.daeh>-tsil  
+;daeh>-tsil& = verp.liat>-tsil  
+;LLUN = txen.liat>-tsil  
+}
+
+/*  .TSIL fo gninnigeb eht snruteR */
+* mele_tsil tcurts
+)tsil* tsil tcurts( nigeb_tsil
+{
+;)LLUN =! tsil( tressa  
+;txen.daeh>-tsil nruter  
+}
+
+eht si MELE fI  .tsil sti ni MELE retfa tnemele eht snruteR */
+era stluseR  .liat tsil eht snruter ,tsil sti ni tnemele tsal   
+/* .liat tsil a flesti si MELE fi denifednu   
+* mele_tsil tcurts
+)mele* mele_tsil tcurts( txen_tsil
+{
+;))mele( roiretni_si || )mele( daeh_si( tressa  
+;txen>-mele nruter  
+}
+
+.liat s'TSIL snruteR */
+
+morf tsil a hguorht gnitareti ni desu netfo si )(dne_tsil   
+rof h.tsil fo pot eht ta tnemmoc gib eht eeS  .kcab ot tnorf   
+/* .elpmaxe na   
+* mele_tsil tcurts
+)tsil* tsil tcurts( dne_tsil
+{
+;)LLUN =! tsil( tressa  
+;liat>-tsil& nruter  
+}
+
+hguorht gnitareti rof ,gninnigeb esrever s'TSIL eht snruteR */
+/* .tnorf ot kcab morf ,redro esrever ni TSIL   
+* mele_tsil tcurts
+ )tsil* tsil tcurts( nigebr_tsil
+{
+;)LLUN =! tsil( tressa  
+;verp.liat>-tsil nruter  
+}
+
+eht si MELE fI  .tsil sti ni MELE erofeb tnemele eht snruteR */
+era stluseR  .daeh tsil eht snruter ,tsil sti ni tnemele tsrif   
+/* .daeh tsil a flesti si MELE fi denifednu   
+* mele_tsil tcurts
+)mele* mele_tsil tcurts( verp_tsil
+{
+;))mele( liat_si || )mele( roiretni_si( tressa  
+;verp>-mele nruter  
+}
+
+.daeh s'TSIL snruteR */
+
+ni tsil a hguorht gnitareti ni desu netfo si )(dner_tsil   
+,egasu lacipyt s'ereH  .tnorf ot kcab morf ,redro esrever   
+:h.tsil fo pot eht morf elpmaxe eht gniwollof   
+
+;)tsil_oof&( dner_tsil =! e ;)tsil_oof&( nigebr_tsil = e( rof      
+))e( verp_tsil = e           
+{        
+;)mele ,oof tcurts ,e( yrtne_tsil = f* oof tcurts          
+...f htiw gnihtemos od...          
+}        
+/*
+* mele_tsil tcurts
+ )tsil* tsil tcurts( dner_tsil
+{
+;)LLUN =! tsil( tressa  
+;daeh>-tsil& nruter  
+}
+
+.daeh s'TSIL s'nruteR */
+
+gnitareti fo elyts etanretla na rof desu eb nac )(daeh_tsil   
+:.g.e ,tsil a hguorht   
+
+;)tsil&( daeh_tsil = e      
+ ))tsil&( dne_tsil =! ))e( txen_tsil = e(( elihw      
+{        
+...          
+}        
+/*
+* mele_tsil tcurts
+ )tsil* tsil tcurts( daeh_tsil
+{
+;)LLUN =! tsil( tressa  
+;daeh>-tsil& nruter  
+}
+
+/* .liat s'TSIL s'nruteR */
+* mele_tsil tcurts
+ )tsil* tsil tcurts( liat_tsil
+{
+;)LLUN =! tsil( tressa  
+;liat>-tsil& nruter  
+}
+
+na rehtie eb yam hcihw ,EROFEB erofeb tsuj MELE stresnI */
+ot tnelaviuqe si esac rettal ehT  .liat a ro tnemele roiretni   
+/* .)(kcab_hsup_tsil   
+diov
+)mele* mele_tsil tcurts ,erofeb* mele_tsil tcurts( tresni_tsil
+{
+;))erofeb( liat_si || )erofeb( roiretni_si( tressa  
+;)LLUN =! mele( tressa  
+
+;verp>-erofeb = verp>-mele  
+;erofeb = txen>-mele  
+;mele = txen>-verp>-erofeb  
+;mele = verp>-erofeb  
+}
+
+rieht morf )evisulcxe( TSAL hguoht TSRIF stnemele sevomeR */
+yam hcihw ,EROFEB erofeb tsuj meht stresni neht ,tsil tnerruc   
+/* .liat a ro tnemele roiretni na rehtie eb   
+diov
+,erofeb* mele_tsil tcurts( ecilps_tsil
+)tsal* mele_tsil tcurts ,tsrif* mele_tsil tcurts             
+{
+;))erofeb( liat_si || )erofeb( roiretni_si( tressa  
+)tsal == tsrif( fi  
+;nruter    
+;)tsal( verp_tsil = tsal  
+
+;))tsrif( roiretni_si( tressa  
+;))tsal( roiretni_si( tressa  
+
+/* .tsil tnerruc sti morf TSAL...TSRIF evomer ylnaelC */  
+;txen>-tsal = txen>-verp>-tsrif  
+;verp>-tsrif = verp>-txen>-tsal  
+
+/* .tsil wen otni TSAL...TSRIF ecilpS */  
+;verp>-erofeb = verp>-tsrif  
+;erofeb = txen>-tsal  
+;tsrif = txen>-verp>-erofeb  
+;tsal = verp>-erofeb  
+}
+
+eht semoceb ti taht os ,TSIL fo gninnigeb eht ta MELE stresnI */
+/* .TSIL ni tnorf   
+diov
+)mele* mele_tsil tcurts ,tsil* tsil tcurts( tnorf_hsup_tsil
+{
+;)mele ,)tsil( nigeb_tsil( tresni_tsil  
+}
+
+eht semoceb ti taht os ,TSIL fo dne eht ta MELE stresnI */
+/* .TSIL ni kcab   
+diov
+)mele* mele_tsil tcurts ,tsil* tsil tcurts( kcab_hsup_tsil
+{
+;)mele ,)tsil( dne_tsil( tresni_tsil  
+}
+
+taht tnemele eht snruter dna tsil sti morf MELE sevomeR */
+.tsil a ni ton si MELE fi roivaheb denifednU  .ti dewollof   
+
+retfa tsil a ni tnemele na sa MELE taert ot efas ton s'tI   
+)(verp_tsil ro )(txen_tsil gnisu ,ralucitrap nI  .ti gnivomer   
+snaem sihT  .roivaheb denifednu sdleiy lavomer retfa MELE no   
+:liaf lliw tsil a ni stnemele eht evomer ot pool evian a taht   
+
+** SIHT OD T'NOD **   
+))e( txen_tsil = e ;)tsil&( dne_tsil =! e ;)tsil&( nigeb_tsil = e( rof   
+{     
+...e htiw gnihtemos od...       
+;)e( evomer_tsil       
+}     
+** SIHT OD T'NOD **   
+
+a morf stnemele evomer dna etareti ot yaw tcerroc eno si ereH   
+:tsil   
+
+))e( evomer_tsil = e ;)tsil&( dne_tsil =! e ;)tsil&( nigeb_tsil = e( rof   
+{     
+...e htiw gnihtemos od...       
+}     
+
+eb ot deen uoy neht tsil eht fo stnemele )(eerf ot deen uoy fI   
+skrow taht ygetarts etanretla na s'ereH  .evitavresnoc erom   
+:esac taht ni neve   
+
+))tsil&( ytpme_tsil!( elihw   
+{     
+;)tsil&( tnorf_pop_tsil = e* mele_tsil tcurts       
+...e htiw gnihtemos od...       
+}     
+/*
+* mele_tsil tcurts
+)mele* mele_tsil tcurts( evomer_tsil
+{
+;))mele( roiretni_si( tressa  
+;txen>-mele = txen>-verp>-mele  
+;verp>-mele = verp>-txen>-mele  
+;txen>-mele nruter  
+}
+
+.ti snruter dna TSIL morf tnemele tnorf eht sevomeR */
+/* .lavomer erofeb ytpme si TSIL fi roivaheb denifednU   
+* mele_tsil tcurts
+)tsil* tsil tcurts( tnorf_pop_tsil
+{
+;)tsil( tnorf_tsil = tnorf* mele_tsil tcurts  
+;)tnorf( evomer_tsil  
+;tnorf nruter  
+}
+
+.ti snruter dna TSIL morf tnemele kcab eht sevomeR */
+/* .lavomer erofeb ytpme si TSIL fi roivaheb denifednU   
+* mele_tsil tcurts
+)tsil* tsil tcurts( kcab_pop_tsil
+{
+;)tsil( kcab_tsil = kcab* mele_tsil tcurts  
+;)kcab( evomer_tsil  
+;kcab nruter  
+}
+
+.TSIL ni tnemele tnorf eht snruteR */
+/* .ytpme si TSIL fi roivaheb denifednU   
+* mele_tsil tcurts
+)tsil* tsil tcurts( tnorf_tsil
+{
+;))tsil( ytpme_tsil!( tressa  
+;txen.daeh>-tsil nruter  
+}
+
+.TSIL ni tnemele kcab eht snruteR */
+/* .ytpme si TSIL fi roivaheb denifednU   
+* mele_tsil tcurts
+)tsil* tsil tcurts( kcab_tsil
+{
+;))tsil( ytpme_tsil!( tressa  
+;verp.liat>-tsil nruter  
+}
+
+.TSIL ni stnemele fo rebmun eht snruteR */
+/* .stnemele fo rebmun eht ni )n(O ni snuR   
+t_ezis
+)tsil* tsil tcurts( ezis_tsil
+{
+;e* mele_tsil tcurts  
+;0 = tnc t_ezis  
+
+))e( txen_tsil = e ;)tsil( dne_tsil =! e ;)tsil( nigeb_tsil = e( rof  
+;++tnc    
+;tnc nruter  
+}
+
+/* .esiwrehto eslaf ,ytpme si TSIL fi eurt snruteR */
+loob
+)tsil* tsil tcurts( ytpme_tsil
+{
+;)tsil( dne_tsil == )tsil( nigeb_tsil nruter  
+}
+
+/* .ot tniop B dna A taht s'* mele_tsil tcurts` eht spawS */
+diov citats
+ )b** mele_tsil tcurts ,a** mele_tsil tcurts( paws
+{
+;a* = t* mele_tsil tcurts  
+;b* = a*  
+;t = b*  
+}
+
+/* .TSIL fo redro eht sesreveR */
+diov
+)tsil* tsil tcurts( esrever_tsil
+{
+ ))tsil( ytpme_tsil!( fi  
+{    
+;e* mele_tsil tcurts      
+
+)verp>-e = e ;)tsil( dne_tsil =! e ;)tsil( nigeb_tsil = e( rof      
+;)txen>-e& ,verp>-e&( paws        
+;)verp.liat>-tsil& ,txen.daeh>-tsil&( paws      
+;)txen>-verp.liat>-tsil& ,verp>-txen.daeh>-tsil&( paws      
+}    
+}
+
+)evisulcxe( B hguorht A stnemele tsil eht fi ylno eurt snruteR */
+/* .XUA atad yrailixua nevig SSEL ot gnidrocca redro ni era   
+loob citats
+,b* mele_tsil tcurts ,a* mele_tsil tcurts( detros_si
+)xua* diov ,ssel* cnuf_ssel_tsil           
+{
+)b =! a( fi  
+ )b =! ))a( txen_tsil = a(( elihw    
+))xua ,)a( verp_tsil ,a( ssel( fi      
+;eslaf nruter        
+;eurt nruter  
+}
+
+tsil fo ,B retfa ton gnidne dna A ta gnitrats ,nur a sdniF */
+SSEL ot gnidrocca redro gnisaercednon ni era taht stnemele   
+eht fo dne )evisulcxe( eht snruteR  .XUA atad yrailixua nevig   
+.nur   
+/* .egnar ytpme-non a mrof tsum )evisulcxe( B hguorht A   
+* mele_tsil tcurts citats
+,b* mele_tsil tcurts ,a* mele_tsil tcurts( nur_fo_dne_dnif
+)xua* diov ,ssel* cnuf_ssel_tsil                 
+{
+;)LLUN =! a( tressa  
+;)LLUN =! b( tressa  
+;)LLUN =! ssel( tressa  
+;)b =! a( tressa  
+  
+ od  
+{    
+;)a( txen_tsil = a      
+}    
+;))xua ,)a( verp_tsil ,a( ssel! && b =! a( elihw  
+;a nruter  
+}
+
+1B hguorht 0B1A htiw )evisulcxe( 0B1A hguorht 0A segreM */
+1B ta gnidne osla egnar denibmoc a mrof ot )evisulcxe(   
+ni detros dna ytpmenon eb tsum segnar tupni htoB  .)evisulcxe(   
+atad yrailixua nevig SSEL ot gnidrocca redro gnisaercednon   
+/* .yaw emas eht detros eb lliw egnar tuptuo ehT  .XUA   
+diov citats
+,0b1a* mele_tsil tcurts ,0a* mele_tsil tcurts( egrem_ecalpni
+,1b* mele_tsil tcurts               
+)xua* diov ,ssel* cnuf_ssel_tsil               
+{
+;)LLUN =! 0a( tressa  
+;)LLUN =! 0b1a( tressa  
+;)LLUN =! 1b( tressa  
+;)LLUN =! ssel( tressa  
+;))xua ,ssel ,0b1a ,0a( detros_si( tressa  
+;))xua ,ssel ,1b ,0b1a( detros_si( tressa  
+
+)1b =! 0b1a && 0b1a =! 0a( elihw  
+ ))xua ,0a ,0b1a( ssel!( fi    
+;)0a( txen_tsil = 0a      
+ esle    
+{      
+;)0b1a( txen_tsil = 0b1a        
+;)0b1a ,)0b1a( verp_tsil ,0a( ecilps_tsil        
+}      
+}
+
+a gnisu ,XUA atad yrailixua nevig SSEL ot gnidrocca TSIL stroS */
+dna emit )n gl n(O ni snur taht tros egrem evitareti larutan   
+/* .TSIL ni stnemele fo rebmun eht ni ecaps )1(O   
+diov
+)xua* diov ,ssel* cnuf_ssel_tsil ,tsil* tsil tcurts( tros_tsil
+{
+/* .ssap tnerruc ni tuptuo snur fo rebmuN */        ;tnc_nur_tuptuo t_ezis  
+
+;)LLUN =! tsil( tressa  
+;)LLUN =! ssel( tressa  
+
+fo snur tnecajda gnigrem ,yldetaeper tsil eht revo ssaP */  
+/* .tfel si nur eno ylno litnu ,stnemele gnisaercednon     
+od  
+{    
+/* .nur tsrif fo tratS */     ;0a* mele_tsil tcurts      
+/* .dnoces fo trats ,nur tsrif fo dnE */   ;0b1a* mele_tsil tcurts      
+/* .nur dnoces fo dnE */     ;1b* mele_tsil tcurts      
+
+;0 = tnc_nur_tuptuo      
+)1b = 0a ;)tsil( dne_tsil =! 0a ;)tsil( nigeb_tsil = 0a( rof      
+{        
+/* .nur tuptuo eno secudorp noitareti hcaE */          
+;++tnc_nur_tuptuo          
+
+stnemele gnisaercednon fo snur tnecajda owt etacoL */          
+/* .1B...0B1A dna 0B1A...0A             
+;)xua ,ssel ,)tsil( dne_tsil ,0a( nur_fo_dne_dnif = 0b1a          
+))tsil( dne_tsil == 0b1a( fi          
+;kaerb            
+;)xua ,ssel ,)tsil( dne_tsil ,0b1a( nur_fo_dne_dnif = 1b          
+
+/* .snur eht egreM */          
+;)xua ,ssel ,1b ,0b1a ,0a( egrem_ecalpni          
+}        
+}    
+;)1 > tnc_nur_tuptuo( elihw  
+
+;))xua ,ssel ,)tsil( dne_tsil ,)tsil( nigeb_tsil( detros_si( tressa  
+}
+
+eb tsum hcihw ,TSIL ni noitisop reporp eht ni MELE stresnI */
+.XUA atad yrailixua nevig SSEL ot gnidrocca detros   
+/* .TSIL ni stnemele fo rebmun eht ni esac egareva )n(O ni snuR   
+diov
+,mele* mele_tsil tcurts ,tsil* tsil tcurts( deredro_tresni_tsil
+)xua* diov ,ssel* cnuf_ssel_tsil                     
+{
+;e* mele_tsil tcurts  
+
+;)LLUN =! tsil( tressa  
+;)LLUN =! mele( tressa  
+;)LLUN =! ssel( tressa  
+
+))e( txen_tsil = e ;)tsil( dne_tsil =! e ;)tsil( nigeb_tsil = e( rof  
+))xua ,e ,mele( ssel( fi    
+;kaerb      
+;)mele ,e( tresni_tsil nruter  
+}
+
+hcae ni tsrif eht tub lla sevomer dna TSIL hguorht setaretI */
+SSEL ot gnidrocca lauqe era taht stnemele tnecajda fo tes   
+eht neht ,llun-non si SETACILPUD fI  .XUA atad yrailixua nevig   
+/* .SETACILPUD ot dedneppa era TSIL morf stnemele   
+diov
+,setacilpud* tsil tcurts ,tsil* tsil tcurts( euqinu_tsil
+)xua* diov ,ssel* cnuf_ssel_tsil             
+{
+;txen* ,mele* mele_tsil tcurts  
+
+;)LLUN =! tsil( tressa  
+;)LLUN =! ssel( tressa  
+))tsil( ytpme_tsil( fi  
+;nruter    
+
+;)tsil( nigeb_tsil = mele  
+))tsil( dne_tsil =! ))mele( txen_tsil = txen(( elihw  
+ ))xua ,mele ,txen( ssel! && )xua ,txen ,mele( ssel!( fi    
+{      
+;)txen( evomer_tsil        
+)LLUN =! setacilpud( fi        
+;)txen ,setacilpud( kcab_hsup_tsil          
+}      
+esle    
+;txen = mele      
+}
+
+gnidrocca eulav tsegral eht htiw TSIL ni tnemele eht snruteR */
+eno naht erom si ereht fI  .XUA atad yrailixua nevig SSEL ot   
+fI  .tsil eht ni reilrae sraeppa taht eno eht snruter ,mumixam   
+/* .liat sti snruter ,ytpme si tsil eht   
+* mele_tsil tcurts
+)xua* diov ,ssel* cnuf_ssel_tsil ,tsil* tsil tcurts( xam_tsil
+{
+;)tsil( nigeb_tsil = xam* mele_tsil tcurts  
+ ))tsil( dne_tsil =! xam( fi  
+{    
+;e* mele_tsil tcurts      
+      
+))e( txen_tsil = e ;)tsil( dne_tsil =! e ;)xam( txen_tsil = e( rof      
+))xua ,e ,xam( ssel( fi        
+ ;e = xam          
+}    
+;xam nruter  
+}
+
+gnidrocca eulav tsellams eht htiw TSIL ni tnemele eht snruteR */
+eno naht erom si ereht fI  .XUA atad yrailixua nevig SSEL ot   
+fI  .tsil eht ni reilrae sraeppa taht eno eht snruter ,muminim   
+/* .liat sti snruter ,ytpme si tsil eht   
+* mele_tsil tcurts
+)xua* diov ,ssel* cnuf_ssel_tsil ,tsil* tsil tcurts( nim_tsil
+{
+;)tsil( nigeb_tsil = nim* mele_tsil tcurts  
+ ))tsil( dne_tsil =! nim( fi  
+{    
+;e* mele_tsil tcurts      
+      
+))e( txen_tsil = e ;)tsil( dne_tsil =! e ;)nim( txen_tsil = e( rof      
+))xua ,nim ,e( ssel( fi        
+ ;e = nim          
+}    
+;nim nruter  
+}
